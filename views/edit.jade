@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method="POST", action="/dogs/"+dog.id+'/?_method=put')
+
+    p Nombre:
+      input(type="text", name="name", value=dog.name)
+
+    p Fecha de nacimiento:
+      - var cumple = moment(dog.birthdate).format('YYYY-MM-DD');
+      input(type="date", name="birthdate", value=cumple)
+
+    p
+      button(type="submit") Enviar

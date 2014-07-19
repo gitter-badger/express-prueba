@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 #{title}: #{dog.name}
+
+  ul
+    - var cumple = moment(dog.birthdate).format('LL');
+    li nacimiento: #{cumple}
+    li edad: #{dog.age()}

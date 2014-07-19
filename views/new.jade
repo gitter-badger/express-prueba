@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method="POST", action="/dogs")
+
+    p Nombre:
+      input(type="text" name="nombre")
+
+    p Fecha de nacimiento:
+      input(type="date" name="nacimiento")
+
+    p
+      button(type="submit") Enviar

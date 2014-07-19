@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each dog in dogs
+      li #{dog.name}
+        a(href='/dogs/'+dog._id) ver
+        | -
+        a(href='/dogs/'+dog._id+'/edit') editar
+        | -
+        a(href='/dogs/'+dog._id+'/delete') borrar
