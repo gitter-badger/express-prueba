@@ -8,6 +8,7 @@ if (!global.hasOwnProperty('db')) {
   global.db = {
     mongoose: mongoose,
     Dog: require('./Dog')(mongoose),
+    Asegurado: require('./Asegurado')(mongoose),
   };
 }
 
