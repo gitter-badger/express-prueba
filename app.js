@@ -31,18 +31,7 @@ app.locals.moment = moment;
 
 // Modelos
 require('./models');
-
-
 app.use('/', require('./modules'));
-
-
-
-
-
-
-
-
-
 
 // app.use('/', routes);
 // app.use('/users', users);
