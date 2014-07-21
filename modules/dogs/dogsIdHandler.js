@@ -10,7 +10,7 @@ var dogsId = {
         res.json(err);
       }
 
-      res.render('ver', {title: 'Ver Perro', dog: dog[0]});
+      res.render('dogs/ver', {title: 'Ver Perro', dog: dog[0]});
     });
   },
 
@@ -24,7 +24,7 @@ var dogsId = {
         if (err) {
           res.json(err);
         }
-        res.render('edit', {title: 'Editar Perro', dog: dog});
+        res.render('dogs/edit', {title: 'Editar Perro', dog: dog});
       });
     },
 

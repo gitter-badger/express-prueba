@@ -8,12 +8,12 @@ var dogs = {
         res.json(err);
       }
 
-      res.render('lista', {title: 'Lista de Perros', dogs: dogs});
+      res.render('dogs/lista', {title: 'Lista de Perros', dogs: dogs});
     });
   },
   agregar: {
     formulario: function (req, res) {
-      res.render('new', {title: 'Crear Amigo-Dog'});
+      res.render('dogs/new', {title: 'Crear Amigo-Dog'});
     },
 
     guardar: function (req, res) {
