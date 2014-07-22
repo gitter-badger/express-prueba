@@ -3,7 +3,7 @@ module.exports = function(mongoose){
 
     var InsumoSchema = new Schema({
         descripcion: String,
-        unidad: Number,
+        unidad: String,
         cantidad: Number,
         cantMin: Number,
 

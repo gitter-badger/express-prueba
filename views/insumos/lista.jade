@@ -5,9 +5,14 @@ block content
 
   ul
     each insumo in insumos
-      li #{dog.name}
+      li #{insumo.descripcion}
+
         a(href='/insumos/'+insumo._id) ver
         | -
         a(href='/insumos/'+insumo._id+'/edit') editar
         | -
         a(href='/insumos/'+insumo._id+'/delete') borrar
+
+
+
+    a(href='/insumos/new') nuevo

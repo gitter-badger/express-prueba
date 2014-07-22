@@ -23,7 +23,12 @@ var insumos = {
             cantMin: insumo.cantMin,
 
         })
-        res.redirect('/insumos')
+        newInsumo.save(function(err, insumo){
+            if(err){
+                res.json(err);
+            }
+            res.redirect('/insumos');
+        });
     }
 
 
