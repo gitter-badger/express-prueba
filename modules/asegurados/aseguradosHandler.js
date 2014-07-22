@@ -21,7 +21,15 @@ var aseguradosHandler = {
         ci: aseguradoForm.ci,
         direccion: aseguradoForm.direccion,
         telefonos: aseguradoForm.telefonos.split(", "),
-        nacimiento: moment(aseguradoForm.nacimiento).format('LL')
+        nacimiento: aseguradoForm.nacimiento
+      });
+
+      newAsegurado.save( function (err, asegurados) {
+        if (err) {
+          res.json(err);
+        }
+
+        res.redirect('/asegurados');
       });
     }
   }
