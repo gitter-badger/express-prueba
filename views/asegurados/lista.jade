@@ -3,11 +3,10 @@ extends ../layout
 block content
   h1= title
 
-  //- ul
-  //-   each dog in dogs
-  //-     li #{dog.name}
-  //-       a(href='/dogs/'+dog._id) ver
-  //-       | -
-  //-       a(href='/dogs/'+dog._id+'/edit') editar
-  //-       | -
-  //-       a(href='/dogs/'+dog._id+'/delete') borrar
+  ul
+    each asegurado in asegurados
+      li #{asegurado.nombres} #{asegurado.apellidos} | ci: #{asegurado.ci}
+        .actions
+          a(href='/asegurado/'+asegurado._id) ver
+          a(href='/asegurado/'+asegurado._id+'/edit') editar
+          a(href='/asegurado/'+asegurado._id+'/delete') borrar

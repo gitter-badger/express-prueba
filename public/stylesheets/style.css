@@ -7,7 +7,23 @@ a {
   color: #00B7FF;
 }
 
+
+/* Formularios */
 form p > span {
-  color: ;
+  color: #999;
   font-size: 11px;
+}
+
+.actions {
+  display: inline;
+  margin-left: 10px;
+}
+
+.actions a {
+  text-decoration: none;
+}
+
+.actions a + a:before {
+  content: '|';
+  margin: 5px;
 }
