@@ -3,7 +3,7 @@ var insumos = {
         db
         .Insumo
         .find()
-        exec( function(err, insumos){
+        .exec( function(err, insumos){
             if (err){
                 res.json(err);
             }
@@ -17,10 +17,10 @@ var insumos = {
         var insumo = req.body
 
         var newInsumo = new db.Insumo({
-            descripcion : Insumo.descripcion,
-            unidad : Insumo.unidad,
-            cantidad: Insumo.cantidad,
-            cantMin: Insumo.cantMin,
+            descripcion : insumo.descripcion,
+            unidad : insumo.unidad,
+            cantidad: insumo.cantidad,
+            cantMin: insumo.cantMin,
 
         })
 

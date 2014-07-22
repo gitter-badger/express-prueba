@@ -8,5 +8,5 @@ module.exports = function(mongoose){
         cantMin: Number,
 
     })
-    return mongoose.module('Insumo', InsumoSchema)
+    return mongoose.model('Insumo', InsumoSchema)
 }
