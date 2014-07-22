@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  h1= title
+
+  form(method="POST", action="/insumos")
+
+    p Descripcion:
+      input(type="text" name="descripcion")
+
+    p Unidad
+        input(type="text", name="unidad")
+
+    p Cantidad:
+      input(type="number", min="1", max="999", name="cantidad")
+
+    p Cantidad Minima:
+      input(type="number", min="1", max="999", name="cantMin")
+
+    p
+      button(type="submit") Enviar

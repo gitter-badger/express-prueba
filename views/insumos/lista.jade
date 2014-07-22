@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  h1= title
+
+  ul
+    each insumo in insumos
+      li #{dog.name}
+        a(href='/insumos/'+insumo._id) ver
+        | -
+        a(href='/insumos/'+insumo._id+'/edit') editar
+        | -
+        a(href='/insumos/'+insumo._id+'/delete') borrar
