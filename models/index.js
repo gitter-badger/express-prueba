@@ -9,6 +9,7 @@ if (!global.hasOwnProperty('db')) {
     mongoose: mongoose,
     Dog: require('./Dog')(mongoose),
     Asegurado: require('./Asegurado')(mongoose),
+    Insumo: require('./Insumo')(mongoose),
   };
 }
 
