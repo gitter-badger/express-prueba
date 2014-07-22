@@ -23,6 +23,10 @@ form p > span {
   text-decoration: none;
 }
 
+.actions a:hover {
+  text-decoration: underline;
+}
+
 .actions a + a:before {
   content: '|';
   margin: 5px;
