@@ -23,7 +23,7 @@ var insumos = {
             cantMin: insumo.cantMin,
 
         })
-
+        res.redirect('/insumos')
     }
 
 
