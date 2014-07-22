@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+  h1= title
+
+  form(method="POST", action="/asegurados")
+
+    p Nombres:
+      input(type="text" name="nombres")
+
+    p Apellidos:
+      input(type="text" name="apellidos")
+
+    p Cédula de identidad:
+      input(type="text" name="ci")
+
+    p Fecha de nacimiento:
+      input(type="date" name="nacimiento")
+
+    p Dirección:
+      input(type="text" name="direccion")
+
+    p Telefonos
+      span (separados por coma. ej: '234654, 653764'):
+      input(type="text" name="telefonos")
+
+    p
+      button(type="submit") Enviar

@@ -1,7 +1,7 @@
 if (!global.hasOwnProperty('db')) {
   var mongoose = require('mongoose');
 
-  var dbName = 'dogs';
+  var dbName = 'fonsafan';
 
   mongoose.connect('mongodb://localhost:27017/' + dbName);
 

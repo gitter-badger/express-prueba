@@ -4,8 +4,8 @@ var express = require('express'),
 // Recurso Asegurados
 aseguradosHandler = require('./aseguradosHandler');
 router.get('/', aseguradosHandler.lista); // listado
-// router.get('/new', aseguradosHandler.agregar.formulario); // formulario de agregar
-// router.post('/', aseguradosHandler.agregar.guardar); // procesa nuevo item
+router.get('/new', aseguradosHandler.agregar.formulario); // formulario de agregar
+router.post('/', aseguradosHandler.agregar.guardar); // procesa nuevo item
 //
 //
 // // Recurso Asegurados/:id

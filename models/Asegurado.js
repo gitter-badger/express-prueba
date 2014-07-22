@@ -6,7 +6,7 @@ module.exports = function (mongoose) {
     apellidos: String,
     ci: Number,
     direccion: String,
-    telefonos: String,
+    telefonos: Array,
     nacimiento: Date
   });
 
