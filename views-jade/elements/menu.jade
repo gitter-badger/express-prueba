@@ -1,0 +1,10 @@
+mixin item(name, url)
+  li
+    a(href=url)= name
+
+
+
+menu
+  +item('Asegurados', '/asegurados')
+  +item('Medicos', '/medicos')
+  +item('Insumos', '/insumos')
