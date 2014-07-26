@@ -2,5 +2,10 @@
 <div id="content">
   {{#each insumos}}
   <li>{{descripcion}}</li>
-
+  <a href="/insumos/{{_id}}">Ver</a>
+  <a href="/insumos/{{_id}}/edit">Editar</a>
+  <a href="/insumos/{{_id}}/delete">Delete</a>
+  {{/each}}
+  <br>
+  <a href="/insumos/new">Nuevo</a>
 </div>
