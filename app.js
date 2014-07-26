@@ -43,10 +43,6 @@ app.use('/', require('./modules'));
 // app.use('/users', users);
 
 
-app.get('/', function (req, res) {
-  res.render('hola', {title: 'Mundo jajaja! <span>.l.</span>'});
-})
-
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
