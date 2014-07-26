@@ -1,9 +1,10 @@
-mixin item(name)
+mixin item(name, url)
   li
-    a= name
+    a(href=url)= name
+
 
 
 menu
-  +item('Asegurados')
-  +item('Medicos')
-  +item('Insumos')
+  +item('Asegurados','/asegurados')
+  +item('Medicos','/medicos')
+  +item('Insumos','/insumos')
