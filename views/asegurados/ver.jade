@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+  h1= title
+
+  ul
+    li.nombres
+      strong= 'Nombre: '
+      = ' ' + asegurado.nombres
+
+    li.apellidos
+      strong= 'Apellidos: '
+      = ' ' + asegurado.apellidos
+
+    li.ci
+      strong= 'C.I.: '
+      = ' ' + asegurado.ci
+
+    li.direccion
+      strong= 'Direccion: '
+      = ' ' + asegurado.direccion
+
+    li.edad
+      strong= 'Edad: '
+      = ' ' + asegurado.edad() + ' años'
+
+    li
+      strong Telefonos
+      ul
+        each tel in asegurado.telefonos
+          li= tel

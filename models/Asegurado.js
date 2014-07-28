@@ -10,7 +10,7 @@ module.exports = function (mongoose) {
     nacimiento: Date
   });
 
-  AseguradoSchema.methods.age = function () {
+  AseguradoSchema.methods.edad = function () {
     return ~~((Date.now() - this.nacimiento) / (31557600000));
   }
 
