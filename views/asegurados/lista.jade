@@ -1,4 +1,4 @@
-extends ./layout-modulo.jade
+extends ../layout
 
 block content
   h1= title
@@ -7,6 +7,6 @@ block content
     each asegurado in asegurados
       li #{asegurado.nombres} #{asegurado.apellidos} | ci: #{asegurado.ci}
         .actions
-          a(href='/asegurado/'+asegurado._id) ver
-          a(href='/asegurado/'+asegurado._id+'/edit') editar
-          a(href='/asegurado/'+asegurado._id+'/delete') borrar
+          a(href='/asegurados/'+asegurado._id) ver
+          a(href='/asegurados/'+asegurado._id+'/edit') editar
+          a(href='/asegurados/'+asegurado._id+'/delete') borrar
