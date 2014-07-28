@@ -46,6 +46,16 @@ var aseguradosIdHandler = {
         res.redirect('/asegurados');
       });
     }
+  },
+
+  eliminar: function (req, res) {
+    var aseguradoId = req.params.id;
+
+    db
+    .Asegurado
+    .findByIdAndRemove(aseguradoId, function (err, asegurado) {
+      res.redirect('/asegurados');
+    });
   }
 }
 
