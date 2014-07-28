@@ -4,19 +4,34 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
 
+    //- ----------------------------------------------------
+    //- Styles
+    //- ----------------------------------------------------
+
     //- Bootstrap
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
     link(rel='stylesheet', href='/bootstrap/css/bootstrap-theme.min.css')
 
-    script(src='/javascripts/script.js')
+    //- Personalizado
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+
+    //- ----------------------------------------------------
+    //- Scripts
+    //- ----------------------------------------------------
 
     //- jQuery 2.1.1
     script(src='/javascripts/jquery-2.1.1.min.js')
 
     //- Bootstrap Scripts
-     script(src='/bootstrap/js/bootstrap.min.js')
+    script(src='/bootstrap/js/bootstrap.min.js')
+
+    //- Personalizado
+    script(src='/javascripts/script.js')
 
   body
+
+    //- Menu
     include ./elements/menu.jade
 
     block content
