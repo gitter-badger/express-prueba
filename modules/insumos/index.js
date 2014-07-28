@@ -3,7 +3,10 @@ var express = require('express'),
 
 
 var insumosHandler = require('./insumosHandler');
-
 router.get('/',insumosHandler.lista);
-router.get('/new' , insumosHandler.nuevo)
-router.post('/' , insumosHandler.guardar)
+router.get('/new' , insumosHandler.nuevo);
+router.post('/' , insumosHandler.guardar);
+
+
+var insumosIdHandler = require('./insumosIdHandler');
+router.get('/:id', insumosIdHandler.ver);
