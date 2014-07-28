@@ -3,7 +3,7 @@ extends ../layout
 block content
   h1= title
 
-  form(method="POST", action="/asegurados/"+asegurado._id)
+  form(method="POST", action="/asegurados/"+asegurado._id+'/?_method=put')
 
     p Nombres:
       input(type="text", name="nombres", value=asegurado.nombres)

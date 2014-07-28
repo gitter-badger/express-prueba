@@ -31,7 +31,20 @@ var aseguradosIdHandler = {
     },
 
     guardar: function (req, res) {
+      var aseguradoId = req.params.id
+        , aseguradoForm = req.body;
 
+      delete aseguradoForm.id;
+      delete aseguradoForm._id;
+
+      // separa la cadena de telefonos para almacenar en mongodb en forma de array
+      aseguradoForm.telefonos = aseguradoForm.telefonos.split(", ");
+
+      db
+      .Asegurado
+      .findByIdAndUpdate(aseguradoId, aseguradoForm, function (err, asegurado) {
+        res.redirect('/asegurados');
+      });
     }
   }
 }

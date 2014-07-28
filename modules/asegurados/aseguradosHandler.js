@@ -20,7 +20,7 @@ var aseguradosHandler = {
         apellidos: aseguradoForm.apellidos,
         ci: aseguradoForm.ci,
         direccion: aseguradoForm.direccion,
-        telefonos: aseguradoForm.telefonos.split(", "),
+        telefonos: aseguradoForm.telefonos.split(", "), // separa la cadena de telefonos para almacenar en mongodb en forma de array
         nacimiento: aseguradoForm.nacimiento
       });
 
