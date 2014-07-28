@@ -1,7 +1,10 @@
+//- los mixin son como 'funciones'
+mixin item (url, title)
+  li
+    a(href=url) title
+
 menu
-  li
-    a(href='/asegurados') Asegurados
-  li
-    a(href='#') Medicos
-  li
-    a(href='#') Insumos
+  //- para ejecutar un mixin se usa el prefijo '+'
+  +item('/asegurados', 'Asegurados')
+  +item('#', 'Medicos')
+  +item('#', 'Insumos')
