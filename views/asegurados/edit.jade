@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+  h1= title
+
+  form(method="POST", action="/asegurados/"+asegurado._id)
+
+    p Nombres:
+      input(type="text", name="nombres", value=asegurado.nombres)
+
+    p Apellidos:
+      input(type="text", name="apellidos", value=asegurado.apellidos)
+
+    p Cédula de identidad:
+      input(type="text", name="ci", value=asegurado.ci)
+
+    p Fecha de nacimiento:
+      //- utiliza el modulo momentjs para formatear la fecha para que sea compatible con html5
+      - var nacimiento = moment(asegurado.nacimiento).format('YYYY-MM-DD');
+      //- siguen habiendo problemas con el tema del uso horario.
+      input(type="date", name="nacimiento", value=nacimiento)
+
+    p Dirección:
+      input(type="text", name="direccion", value=asegurado.direccion)
+
+    p Telefonos
+      span (separados por coma. ej: '234654, 653764'):
+      //- asegurado.telefonos.join(', ') -> join concatena los elementos del array devuelto por mongodb
+      input(type="text", name="telefonos", value=asegurado.telefonos.join(', '))
+
+    p
+      button(type="submit") Enviar

@@ -12,6 +12,27 @@ var aseguradosIdHandler = {
         asegurado: asegurado
       });
     });
+  },
+
+  editar: {
+    formulario: function (req, res) {
+      var aseguradoId = req.params.id;
+
+      db
+      .Asegurado
+      .findById(aseguradoId, function (err, asegurado) {
+        if (err) { res.json(err); }
+
+        res.render('asegurados/edit', {
+          title: 'Editar Asegurado',
+          asegurado: asegurado
+        });
+      });
+    },
+
+    guardar: function (req, res) {
+
+    }
   }
 }
 
