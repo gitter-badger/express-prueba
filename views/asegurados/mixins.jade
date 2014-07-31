@@ -1,0 +1,8 @@
+mixin actionButtons (id, items)
+  each item in items
+    if (item == 'ver')
+      +linkButton('/asegurados/'+id, 'ver')
+    else if (item == 'edit')
+      +linkButton('/asegurados/'+id+'/edit', 'editar')
+    else if (item == 'delete')
+      +linkButton('/asegurados/'+id+'/delete', 'eliminar')

@@ -4,6 +4,4 @@ table.table
       td #{asegurado.nombres} #{asegurado.apellidos}
       td #{asegurado.ci}
       td.btn-group.btn-group-xs
-        +linkButton('/asegurados/'+asegurado._id, 'ver')
-        +linkButton('/asegurados/'+asegurado._id+'/edit', 'editar')
-        +linkButton('/asegurados/'+asegurado._id+'/delete', 'borrar')
+        +actionButtons(asegurado._id, ['ver', 'edit', 'delete'])
