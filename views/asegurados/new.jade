@@ -1,4 +1,7 @@
-extends ../layout
+extends layout
+
+block actions
+  +linkButton('/asegurados/', 'lista')
 
 block content
   h1= title

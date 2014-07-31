@@ -1,0 +1,9 @@
+table.table
+  each asegurado in asegurados
+    tr
+      td #{asegurado.nombres} #{asegurado.apellidos}
+      td #{asegurado.ci}
+      td.btn-group.btn-group-xs
+        +linkButton('/asegurados/'+asegurado._id, 'ver')
+        +linkButton('/asegurados/'+asegurado._id+'/edit', 'editar')
+        +linkButton('/asegurados/'+asegurado._id+'/delete', 'borrar')

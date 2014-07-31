@@ -1,12 +1,9 @@
-extends ../layout
+extends layout
 
 block content
   h1= title
 
-  ul
-    each asegurado in asegurados
-      li #{asegurado.nombres} #{asegurado.apellidos} | ci: #{asegurado.ci}
-        .actions
-          a(href='/asegurados/'+asegurado._id) ver
-          a(href='/asegurados/'+asegurado._id+'/edit') editar
-          a(href='/asegurados/'+asegurado._id+'/delete') borrar
+  include ./elements/asegurados-list
+
+block actions
+  +linkButton('/asegurados/new', 'nuevo')

@@ -1,3 +1,6 @@
+include ./mixins/botones
+
+
 doctype html
 html
   head
@@ -22,7 +25,9 @@ html
 
       //- el block content es reemplazado por el valor devuelto al renderizar la vista
 
-      block content
+      block content-module
+
+      include ./footer
 
 
 
