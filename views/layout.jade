@@ -15,6 +15,16 @@ html
     //- Personalizado
     link(rel='stylesheet', href='/stylesheets/style.css')
 
+  body
+
+    .container
+      include ./elements/menu
+
+      //- el block content es reemplazado por el valor devuelto al renderizar la vista
+
+      block content
+
+
 
     //- ----------------------------------------------------
     //- Scripts
@@ -28,9 +38,3 @@ html
 
     //- Personalizado
     script(src='/javascripts/script.js')
-
-  body
-
-    include ./elements/menu
-    
-    block content

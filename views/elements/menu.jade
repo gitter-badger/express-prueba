@@ -1,10 +1,13 @@
+// Esto es el menu principal de la aplicacion
+
 //- los mixin son como 'funciones'
-mixin item (url, title)
-  li
+mixin item (url, title, clase)
+  li(class=clase)
     a(href=url)= title
 
-menu
+menu.nav.nav-pills
   //- para ejecutar un mixin se usa el prefijo '+'
-  +item('/asegurados', 'Asegurados')
+  +item('/asegurados', 'Asegurados', 'active')
   +item('#', 'Medicos')
+  //- la almoadilla # se debe cambiar por la url deseada
   +item('#', 'Insumos')
