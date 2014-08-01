@@ -6,8 +6,9 @@ mixin item (url, title, clase)
     a(href=url)= title
 
 menu.nav.nav-pills
+  +item('/', 'Inicio', 'active')
   //- para ejecutar un mixin se usa el prefijo '+'
-  +item('/asegurados', 'Asegurados', 'active')
+  +item('/asegurados', 'Asegurados')
   +item('#', 'Medicos')
   //- la almoadilla # se debe cambiar por la url deseada
   +item('#', 'Insumos')
