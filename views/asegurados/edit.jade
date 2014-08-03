@@ -11,28 +11,28 @@ block content
     div.form-group
       label(for='nombres', class='col-lg-2 control-label' ) Nombre
       div.col-lg-10
-        input(type="text", id="nombres", Value=asegurado.nombres).form-control
+        input(type="text", id="nombres", name='nombres', Value=asegurado.nombres).form-control
     div.form-group
       label(for='apellidos', class='col-lg-2 control-label' ) Apellido
       div.col-lg-10
-        input(type="text", id="apellidos", Value=asegurado.apellidos).form-control
+        input(type="text", id="apellidos", name='apellidos', Value=asegurado.apellidos).form-control
     div.form-group
       label(for='ci', class='col-lg-2 control-label' ) Cedula
       div.col-lg-10
-        input(type="text", id="ci", Value=asegurado.ci).form-control
+        input(type="text", id="ci", name='ci', Value=asegurado.ci).form-control
     div.form-group
       label(for='nacimiento', class='col-lg-2 control-label' ) Fecha de Nacimiento
       div.col-lg-10
         -var nacimiento = moment(asegurado.nacimiento).format('YYYY-MM-DD');
-        input(type="date", id="nacimiento", Value= nacimiento).form-control
+        input(type="date", id="nacimiento", name='nacimiento', Value= nacimiento).form-control
     div.form-group
       label(for='direccion', class='col-lg-2 control-label' ) Direccion
       div.col-lg-10
-        input(type="text", id="direccion", Value=asegurado.direccion).form-control
+        input(type="text", id="direccion", name='direccion', Value=asegurado.direccion).form-control
     div.form-group
       label(for='telefonos', class='col-lg-2 control-label' ) Telefonos
       div.col-lg-10
-        input(type="text", id="telefonos", Value=asegurado.telefonos.join(', ')).form-control
+        input(type="text", id="telefonos", name='telefonos', Value=asegurado.telefonos.join(', ')).form-control
     div.form-group
       div(class='col-lg-offset-2 col-lg-10')
         button(type='submit', class='btn btn-default') Enviar
