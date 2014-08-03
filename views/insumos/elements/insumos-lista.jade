@@ -1,0 +1,8 @@
+table.table
+  each insumo in insumos
+    tr
+      td #{insumo.descripcion}
+      td.btn-group.btn-group-xs
+        +linkButton('/insumos/'+insumo._id, 'Ver')
+        +linkButton('/insumos/'+insumo._id+'/edit', 'Editar')
+        +linkButton('/insumos/'+insumo._id+'/delete', 'Borrar')

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+
+  ul.list-group
+    li.list-group-item Descripcion: #{insumo.descripcion}
+
+    li.list-group-item Unidad: #{insumo.unidad}
+
+    li.list-group-item Cantidad: #{insumo.cantidad}
+
+    li.list-group-item Cantidad Minima: #{insumo.cantMin}
+
+
+block actions
+  +linkButton('/insumos/'+insumo._id+'/edit', 'Editar')
+
+  +linkButton('/insumos/'+insumo._id+'/delte', 'Delete')
+
+  +linkButton('/insumos/', 'Lista')
