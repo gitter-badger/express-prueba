@@ -1,0 +1,10 @@
+mixin actionButtons (id, items)
+  each item in items
+    if (item == 'view')
+      +linkButton('/medicos/'+id, 'ver')
+    else if (item == 'edit')
+      +linkButton('/medicos/'+id+'/edit', 'editar')
+    else if (item == 'delete')
+      +linkButton('/medicos/'+id+'/delete', 'eliminar')
+    else if (item == 'list')
+      +linkButton('/medicos', 'Lista')

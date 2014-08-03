@@ -1,7 +1,7 @@
 extends layout
 
 block actions
-  +linkButton('/medicos', 'Lista')
+  +actionButtons(medico._id, ['list', 'edit', 'delete'])
 
 block content
   h1= title

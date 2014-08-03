@@ -9,6 +9,6 @@ router.post('/', medicosHandler.nuevo.guardar);
 
 var medicosIdHandler = require('./medicosIdHandler');
 router.get('/:id', medicosIdHandler.view); //ver
-// router.get('/:id/edit', medicosIdHandler.edit.form); //editar formulario
-// router.put('/:id', medicosIdHandler.edit.save); //editar guardar
-// router.get('/:id/delete', medicosIdHandler.del)//eliminar
+router.get('/:id/edit', medicosIdHandler.edit.form); //editar formulario
+router.put('/:id', medicosIdHandler.edit.save); //editar guardar
+router.get('/:id/delete', medicosIdHandler.del)//eliminar

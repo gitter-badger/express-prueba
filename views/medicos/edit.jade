@@ -1,0 +1,50 @@
+extends layout
+
+block actions
+  +linkButton('/medicos', 'Ver lista')
+
+block content
+  h1= title
+
+  form(action='/medicos/'+medico._id+'/?_method=put', method='post', role='form').form-horizontal
+
+    div.form-group
+      label(for='nombres').control-label.col-lg-2 Nombres:
+      .col-lg-10
+        input(type="text" id='nombres' name="nombres" value=medico.nombres).form-control
+
+    div.form-group
+      label(for='apellidos').control-label.col-lg-2 Apellidos:
+      .col-lg-10
+        input(type="text" id='apellidos' name="apellidos" value=medico.apellidos).form-control
+
+    div.form-group
+      label(for='especialidades').control-label.col-lg-2 Especialidades:
+      .col-lg-10
+        input(type='text' id='especialidades' name='especialidades' value=medico.especialidades.join(', ')).form-control
+        span.text-muted (separados por coma. ej: 'Radiologia, Cardiologia')
+
+    div.form-group
+      label(for='ci').control-label.col-lg-2 Cédula de identidad:
+      .col-lg-10
+        input(type="text" id='ci' name="ci" value=medico.ci).form-control
+
+    div.form-group
+      label(for='nacimiento').control-label.col-lg-2 Fecha de nacimiento:
+      .col-lg-10
+        input(type="date" id='nacimiento' name="nacimiento" value=medico.nacimiento).form-control
+
+    div.form-group
+      label(for='direccion').control-label.col-lg-2 Dirección:
+      .col-lg-10
+        input(type="text" id='direccion' name="direccion" value=medico.direccion).form-control
+
+    div.form-group
+      label(for='telefonos').control-label.col-lg-2 Telefonos:
+      .col-lg-10
+        input(type="text" id='telefonos' name="telefonos" value=medico.telefonos).form-control
+        span.text-muted (separados por coma. ej: '234654, 653764'):
+
+    div.form-group
+      div.col-lg-offset-2.col-lg-10
+          button(type="submit").btn.btn-default Enviar
