@@ -9,19 +9,19 @@ block content
     div.form-group
       label(for='descripcion', class='col-lg-2 control-label' ) Descripcion
       div.col-lg-10
-        input(type="text", id="descripcion", value=insumo.descripcion).form-control
+        input(type="text",name="descripcion", id="descripcion", value=insumo.descripcion).form-control
     div.form-group
       label(for='unidad', class='col-lg-2 control-label' ) Unidad
       div.col-lg-10
-        input(type="text", id="unidad", value=insumo.unidad).form-control
+        input(type="text",name="unidad", id="unidad", value=insumo.unidad).form-control
     div.form-group
       label(for='cantidad', class='col-lg-2 control-label' ) Cantidad
       div.col-lg-10
-        input(type="number", min="1", max="999", id="cantidad", value=insumo.cantidad).form-control
+        input(type="number",name="cantidad", min="1", max="999", id="cantidad", value=insumo.cantidad).form-control
     div.form-group
       label(for='cantMin', class='col-lg-2 control-label' ) Cantidad Minima
       div.col-lg-10
-        input(type="number", min="1", max="999", id="cantMin", value=insumo.cantMin).form-control
+        input(type="number", name="cantMin", min="1", max="999", id="cantMin", value=insumo.cantMin).form-control
     div.form-group
       div(class='col-lg-offset-2 col-lg-10')
         button(type='submit', class='btn btn-default') Enviar
