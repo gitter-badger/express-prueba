@@ -5,7 +5,7 @@ mixin linkButton (url, title, clase)
 
 
 //- los mixin son como 'funciones'
-mixin itemMenu (url, title, active)
+mixin itemMenu (active, url, title)
   if (url == active)
     - var clase = 'active'
   li(class=clase)
@@ -14,9 +14,4 @@ mixin itemMenu (url, title, active)
 
 mixin menuPrincipal (active)
   menu.nav.nav-pills
-    +itemMenu('/', 'Inicio', active)
-    //- para ejecutar un mixin se usa el prefijo '+'
-    +itemMenu('/asegurados', 'Asegurados', active)
-    +itemMenu('/medicos', 'Medicos', active)
-    //- la almoadilla # se debe cambiar por la url deseada
-    +itemMenu('/insumos', 'Insumos', active)
+    include ../elements/menu
