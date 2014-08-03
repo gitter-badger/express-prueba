@@ -1,5 +1,4 @@
-include ./mixins/botones
-
+include ./mixins/mixins
 
 doctype html
 html
@@ -20,7 +19,7 @@ html
   body
 
     .container
-      include ./elements/menu
+      block menu-principal
 
       //- el block content es reemplazado por el valor devuelto al renderizar la vista
 
