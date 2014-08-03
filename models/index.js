@@ -10,6 +10,7 @@ if (!global.hasOwnProperty('db')) {
     Dog: require('./Dog')(mongoose),
     Asegurado: require('./Asegurado')(mongoose),
     Insumo: require('./Insumo')(mongoose),
+    Medico: require('./Medico')(mongoose)
   };
 }
 

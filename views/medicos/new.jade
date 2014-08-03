@@ -1,0 +1,35 @@
+extends layout
+
+block actions
+  +linkButton('/medicos', 'Ver lista')
+
+block content
+  h1= title
+
+  form(action='/medicos', method='post')
+
+    p Nombres:
+      input(type="text" name="nombres")
+
+    p Apellidos:
+      input(type="text" name="apellidos")
+
+    p Especialidades:
+      input(type='text' name='especialidades')
+      span (separados por coma. ej: 'Radiologia, Cardiologia')
+
+    p Cédula de identidad:
+      input(type="text" name="ci")
+
+    p Fecha de nacimiento:
+      input(type="date" name="nacimiento")
+
+    p Dirección:
+      input(type="text" name="direccion")
+
+    p Telefonos
+      input(type="text" name="telefonos")
+      span (separados por coma. ej: '234654, 653764'):
+
+    p
+      button(type="submit") Enviar

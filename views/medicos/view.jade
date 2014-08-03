@@ -1,0 +1,37 @@
+extends layout
+
+block actions
+  +linkButton('/medicos', 'Lista')
+
+block content
+  h1= title
+
+  ul.list-group.view
+
+    li.list-group-item
+      span Nombres
+      = medico.nombres
+
+    li.list-group-item
+      span Apellidos
+      = medico.apellidos
+
+    li.list-group-item
+      span Especialidades
+      = medico.especialidades.join(', ')
+
+    li.list-group-item
+      span C.I.
+      = medico.ci
+
+    li.list-group-item
+      span Nacimiento
+      = moment(medico.nacimiento).format('LL')
+
+    li.list-group-item
+      span Dirección
+      = medico.direccion
+
+    li.list-group-item
+      span Teléfonos
+      = medico.telefonos.join(', ')

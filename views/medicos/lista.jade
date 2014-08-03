@@ -1,0 +1,31 @@
+extends layout
+
+block actions
+  +linkButton('/medicos/new', 'Nuevo')
+
+block content
+  h1= title
+
+  table.table
+    thead
+      tr
+        th Nombre completo
+        th Especialidades
+        th C.I.:
+        //- th Dirección
+        //- th Teléfonos
+        //- th Nacimiento
+        th Acciones
+    tbody
+      each medico in medicos
+        tr
+          td Dr. #{medico.nombres} #{medico.apellidos}
+          td= medico.especialidades.join(', ')
+          td= medico.ci
+          //- td= medico.direccion
+          //- td= medico.telefonos.join(', ')
+          //- td= medico.nacimiento
+          td.btn-group.btn-group-xs
+            +linkButton('/medicos/'+medico._id, 'ver')
+            +linkButton('/medicos/'+medico._id+'/edit', 'editar')
+            +linkButton('/medicos/'+medico._id+'/delete', 'eliminar')

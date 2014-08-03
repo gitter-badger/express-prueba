@@ -1,33 +1,12 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+
+ul.view li span {
+  font-weight: bold;
 }
 
-
-/* Formularios */
-form p > span {
-  color: #999;
-  font-size: 11px;
-}
-
-.actions {
-  display: inline;
-  margin-left: 10px;
-}
-
-.actions a {
-  text-decoration: none;
-}
-
-.actions a:hover {
-  text-decoration: underline;
-}
-
-.actions a + a:before {
-  content: '|';
-  margin: 5px;
+ul.view li span:after {
+  content: ' ';
 }
