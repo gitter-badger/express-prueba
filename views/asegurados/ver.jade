@@ -7,28 +7,28 @@ block actions
 block content
   h1= title
 
-  ul
-    li.nombres
+  ul.list-group
+    li.list-group-item
       strong= 'Nombre: '
       = ' ' + asegurado.nombres
 
-    li.apellidos
+    li.list-group-item
       strong= 'Apellidos: '
       = ' ' + asegurado.apellidos
 
-    li.ci
+    li.list-group-item
       strong= 'C.I.: '
       = ' ' + asegurado.ci
 
-    li.direccion
+    li.list-group-item
       strong= 'Direccion: '
       = ' ' + asegurado.direccion
 
-    li.edad
+    li.list-group-item
       strong= 'Edad: '
       = ' ' + asegurado.edad() + ' años'
 
-    li
+    li.list-group-item
       strong Telefonos
       ul
         each tel in asegurado.telefonos

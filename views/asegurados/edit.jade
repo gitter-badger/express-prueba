@@ -1,5 +1,4 @@
 extends layout
-
 block actions
   +linkButton('/asegurados/', 'lista')
   +actionButtons(asegurado._id, ['ver', 'delete'])
@@ -8,30 +7,69 @@ block actions
 block content
   h1= title
 
-  form(method="POST", action="/asegurados/"+asegurado._id+'/?_method=put')
+  form(method="POST", action="/asegurados", role='form').form-horizontal
+    div.form-group
+      label(for='nombres', class='col-lg-2 control-label' ) Nombre
+      div.col-lg-10
+        input(type="text", id="nombres", Value=asegurado.nombres).form-control
+    div.form-group
+      label(for='apellidos', class='col-lg-2 control-label' ) Apellido
+      div.col-lg-10
+        input(type="text", id="apellidos", Value=asegurado.apellidos).form-control
+    div.form-group
+      label(for='ci', class='col-lg-2 control-label' ) Cedula
+      div.col-lg-10
+        input(type="text", id="ci", Value=asegurado.ci).form-control
+    div.form-group
+      label(for='nacimiento', class='col-lg-2 control-label' ) Fecha de Nacimiento
+      div.col-lg-10
+        -var nacimiento = moment(asegurado.nacimiento).format('YYYY-MM-DD');
+        input(type="date", id="nacimiento", Value= nacimiento).form-control
+    div.form-group
+      label(for='direccion', class='col-lg-2 control-label' ) Direccion
+      div.col-lg-10
+        input(type="text", id="direccion", Value=asegurado.direccion).form-control
+    div.form-group
+      label(for='teletelefonos', class='col-lg-2 control-label' ) Telefonos
+      div.col-lg-10
+        input(type="text", id="telefonos", Value=asegurado.telefonos.join(', ')).form-control
+    div.form-group
+      div(class='col-lg-offset-2 col-lg-10')
+        button(type='submit', class='btn btn-default') Enviar
 
-    p Nombres:
-      input(type="text", name="nombres", value=asegurado.nombres)
 
-    p Apellidos:
-      input(type="text", name="apellidos", value=asegurado.apellidos)
 
-    p Cédula de identidad:
-      input(type="text", name="ci", value=asegurado.ci)
 
-    p Fecha de nacimiento:
-      //- utiliza el modulo momentjs para formatear la fecha para que sea compatible con html5
-      - var nacimiento = moment(asegurado.nacimiento).format('YYYY-MM-DD');
-      //- siguen habiendo problemas con el tema del uso horario.
-      input(type="date", name="nacimiento", value=nacimiento)
 
-    p Dirección:
-      input(type="text", name="direccion", value=asegurado.direccion)
 
-    p Telefonos
-      span (separados por coma. ej: '234654, 653764'):
-      //- asegurado.telefonos.join(', ') -> join concatena los elementos del array devuelto por mongodb
-      input(type="text", name="telefonos", value=asegurado.telefonos.join(', '))
 
-    p
-      button(type="submit") Enviar
+
+
+
+  //- form(method="POST", action="/asegurados/"+asegurado._id+'/?_method=put')
+  //-
+  //-   p Nombres:
+  //-     input(type="text", name="nombres", value=asegurado.nombres)
+  //-
+  //-   p Apellidos:
+  //-     input(type="text", name="apellidos", value=asegurado.apellidos)
+  //-
+  //-   p Cédula de identidad:
+  //-     input(type="text", name="ci", value=asegurado.ci)
+  //-
+  //-   p Fecha de nacimiento:
+  //-     //- utiliza el modulo momentjs para formatear la fecha para que sea compatible con html5
+  //-     - var nacimiento = moment(asegurado.nacimiento).format('YYYY-MM-DD');
+  //-     //- siguen habiendo problemas con el tema del uso horario.
+  //-     input(type="date", name="nacimiento", value=nacimiento)
+  //-
+  //-   p Dirección:
+  //-     input(type="text", name="direccion", value=asegurado.direccion)
+  //-
+  //-   p Telefonos
+  //-     span (separados por coma. ej: '234654, 653764'):
+  //-     //- asegurado.telefonos.join(', ') -> join concatena los elementos del array devuelto por mongodb
+  //-     input(type="text", name="telefonos", value=asegurado.telefonos.join(', '))
+  //-
+  //-   p
+  //-     button(type="submit") Enviar
